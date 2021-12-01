@@ -1,0 +1,22 @@
+<html>
+    <head>
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    </head>
+	<body>
+		<table>
+            {%for row in grid%}
+            <tr>
+                {%for item in row%}
+                <td>{{item}}</td>
+                {%endfor%}
+            </tr>
+            {%endfor%}
+        </table>
+        <form action="/jugar" method="post">
+            <input name="X" placeholder="Ingrese X">
+            <input name="Y" placeholder="Ingrese Y">
+            <input type="submit" value="Enviar">
+        </form>
+	</body>
+</html>
